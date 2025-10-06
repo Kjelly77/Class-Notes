@@ -79,3 +79,11 @@ print(type(s))
 print(s[0]) #result is s
 print(s[-1]) #result is l
 
+# uppercase and lowercase are not interwoven
+
+word = banana
+upp_word = word.upper()
+lower_word = word.lower_wordtitle_word = word.title
+print(upper_world)
+print(lower_word)
+print(title_word)
