@@ -44,3 +44,24 @@ print(s.replace("Squirrel", "Marmot") # s = lower case squirrel, no replace
 #Opening a file
 
 See related worksheet.
+f=open('10202025input.txt')
+print(f)
+
+print(f.read()) # reads everything
+
+print(f.readline()) # Reads first line
+print(f.readline()) #reads second line, next time you do operation it will continue at this point below
+print(f.readlines()) #reads all lines and puts them in a list
+
+for line in f:
+    print(F"*{line}*")
+   # or
+
+for line in f:
+    print(F"*{line.strip()}*") # much cleaner
+
+total=0
+for line in f:
+    print(F"*{line.strip()}*")
+    total+=int(line)
+print(total) # prints total of all the lines
