@@ -65,3 +65,57 @@ for line in f:
     print(F"*{line.strip()}*")
     total+=int(line)
 print(total) # prints total of all the lines
+
+#to read file again
+
+total=0
+for line in f:
+    print(F"*{line.strip()}*")
+    total+=int(line)
+f.close()  # must close and then open
+f=open('10202025input.txt')
+print(total)
+
+#handy dandy, lot of cool things we can do below
+nums=[]
+for line in f:
+    nums.append(int(line))
+f.close()  
+print(nums)
+print(sum(nums))
+
+nums=[]
+with open('10202025input.txt') as f:   # with auto closes cleanly
+    for line in f:
+        nums.append(int(line))
+
+print(nums)
+print(sum(nums))
+
+# That was reading from a file, now talk about writing to a file:
+
+# save txt file locally ... i think, at least thats what he did, write code in Geany?? Showing filepath to downloads
+
+
+f=open("10202025output.txt", "w") # w for write, r for read
+f.write("Hello")
+f.write("world")
+
+#Now go to your downloads, open the output file, you will see Helloworld all in one line
+
+import time
+f=open("10202025output.txt", "w") 
+f.write("Hello")
+f.write("world")
+
+#nothing in output.txt yet
+time.sleep(15) #nothing in output.txt file until 15 seconds later
+#after program over, then "Helloworld" is in file
+
+import time
+f=open("10202025output.txt", "w") 
+f.write("Hello")
+f.write("world")
+f.close() # really need this in there
+
+time.sleep(15) 
