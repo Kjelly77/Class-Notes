@@ -168,3 +168,18 @@ f=open("10202025output.txt", "w") as f:
     f.write(f"num: {234}\n") 
 
 time.sleep(15)
+
+# try and except commands...
+import sys
+nums = []
+try: 
+    with open('input.txt') as f:
+        for line in f:
+            nums.append(int(line))
+
+except:
+    print:("couldnt open File, Exiting Program")
+    sys.exit(1) #exit(0) means everything okay, (1) means everything not okay
+
+print(nums)
+print(sum(nums))
