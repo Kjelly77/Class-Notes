@@ -97,25 +97,74 @@ print(sum(nums))
 # save txt file locally ... i think, at least thats what he did, write code in Geany?? Showing filepath to downloads
 
 
-f=open("10202025output.txt", "w") # w for write, r for read
+f=open("10202025output.txt", "w") as f:# w for write, r for read, a for append
+# w is dangerous, will overwrite what is in file if anything, a is safer
 f.write("Hello")
 f.write("world")
 
 #Now go to your downloads, open the output file, you will see Helloworld all in one line
 
 import time
-f=open("10202025output.txt", "w") 
-f.write("Hello")
-f.write("world")
+f=open("10202025output.txt", "w") as f:
+    f.write("Hello")
+    f.write("world")
 
 #nothing in output.txt yet
 time.sleep(15) #nothing in output.txt file until 15 seconds later
 #after program over, then "Helloworld" is in file
+#understood close at end but you have to get to the end
 
 import time
-f=open("10202025output.txt", "w") 
+f=open("10202025output.txt", "w") as f:
 f.write("Hello")
 f.write("world")
-f.close() # really need this in there
+f.close() # really need this in there - this is good practice
 
 time.sleep(15) 
+
+#watched video of different hard drive sounds.
+# Can make music with floppy disk spin ups \
+
+f=open("10202025output.txt", "w") as f:
+    f.write("Hello\n") # makes world print on second line
+    f.write("world")
+
+#what happens here
+
+import time
+
+f=open("10202025output.txt", "w") as f:
+    f.write("Hello\n") # makes world print on second line
+    f.write("world")
+    f.write(234) # will this work?
+
+time.sleep(15)
+
+#it only takes strings, can turn that into a string
+
+import time
+
+f=open("10202025output.txt", "w") as f:
+    f.write("Hello\n") 
+    f.write("world\n")
+    f.write(f"num: {234}\n") # do magic and turn into correct result, num: 234\n is what gets sent
+
+time.sleep(15)
+
+# demo file directory
+
+import time
+inport os
+
+os.mkdir("demo files")
+# ~ . mean the current workind directory CWD
+#~ with open("./demo_files/output.txt", "a") as f:
+print("\\") # prints \
+print)"\"") #prints quote
+
+f=open("10202025output.txt", "w") as f:
+    f.write("Hello\n") 
+    f.write("world\n")
+    f.write(f"num: {234}\n") 
+
+time.sleep(15)
