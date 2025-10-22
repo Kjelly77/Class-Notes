@@ -82,3 +82,17 @@ conn = sqlite3.connect("users.db") # may or may not create the .db file (daataba
 cursor.execute("INSERT INTO users (name,age) VALUES (?, ?)"", ("Alice", 25)) # Create table if not exists
 
 #gets really fancy from here dont need to use this in this class. 
+
+UTF-8 # style of encoding
+with open("notes.txt, "r", encoding="utf-8") as f:
+    text = f.read()
+
+    with open("notes.txt, "a", encoding="utf-8") as f:
+    text = f.write("New entry...\n")
+
+    utf-8
+    latin-1
+    cp1252 # old windows
+    utf-16 # where we are trying to go
+    shift_jis #japanese
+    big5 # traditional
