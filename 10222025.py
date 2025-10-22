@@ -62,3 +62,23 @@ with open("data.pkl", 'wb') as file: #write in binary, this also created the fil
 #deserialize (load) data
 with open("data.pkl", 'rb') as file: #read in binary
     loaded_data = pickle.load(file)
+
+#swtitch files between python and other languages
+import json # you shouldnt write your own json, you should have the PC write it
+data = {"name": "Alice", "Scores": [85, 92, 78]}
+with open("data.json", 'wb') as file: 
+    picklejson.dump(data, file)
+
+
+with open("data.pkljson", 'rb') as file: 
+    loaded_data = json.load(file)
+print(loaded_data)
+
+
+import sqlite3 # structured querry language
+
+conn = sqlite3.connect("users.db") # may or may not create the .db file (daatabase)
+
+cursor.execute("INSERT INTO users (name,age) VALUES (?, ?)"", ("Alice", 25)) # Create table if not exists
+
+#gets really fancy from here dont need to use this in this class. 
