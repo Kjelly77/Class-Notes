@@ -68,10 +68,13 @@ class Point:
         self.y=y
         self.dist_org=math.hypot(self.x,self.y) # If someone changed X, everything would break
 
+    def set_x(self, new_x):
+        self.x=new_x
+
     def move(self,dx,dy)
         self.x+=dx
         self.y+=dy
-        self.dist_org=math.hypot(self.x,self.y) # If someone changed X, everything would break
+        self.dist_org=math.hypot(self.x,self.y) # Also, this takes hours to compute, called cacheing
 
     def distance_to_origin(self):
         return math.hypot(self.x,self.y)
