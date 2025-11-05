@@ -103,3 +103,33 @@ b=a
 b[1]=99
 print(f"a={a}")
 print(f"b={b}")
+
+
+#use deep copy if you want to copy recipe book and change something in one copy but not another.  I think i will just modify the one i have
+
+#Time complexity
+
+#Big O Notation Basics
+
+import Time
+
+def func(n):
+    for i in range(n)
+        print("hello")
+
+func(10)
+#prints hello 10 times
+
+import Time
+
+def func_O_n(n):
+    for i in range(n)
+        print("hello")
+
+start=time.time()
+func_O_n(10000)
+end=time.time()
+print(f"elapsed time is {end-start.4f} seconds")
+
+#prints result and how long it took, double the size, takes twice as long. 
+
