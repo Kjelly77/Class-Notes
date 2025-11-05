@@ -86,3 +86,20 @@ a=Fraction(2,4)
 print(a)
 
 a+a
+
+#deep copying
+
+a=[1,2,3]
+b=a
+
+b[1]=99
+print(b)
+
+#but
+
+a=[1,2,3]
+b=a
+
+b[1]=99
+print(f"a={a}")
+print(f"b={b}")
