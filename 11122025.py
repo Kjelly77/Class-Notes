@@ -9,7 +9,9 @@ lambda 4/5
 sort uses lambda
 zip 4/5
 map 2/5
-
+named tuple 1/5
+*args**kwargs 2/5
+any and all 3/5
 
 nums=[1,2,3,4,54,34,1,1,1,]
 nums=set(nums) #de duplicate
@@ -54,3 +56,24 @@ x,y=[3,4] # zip auto unpacks, 3 in x, 4 in y
 
 for name,age in zip(names,ages):
     print(name,age)
+
+
+def sum(a=0,b=0,c=0,d=0,e=0):
+    return a+b+c+d+e
+print( sum(1) )
+print (sum(1,2,3) )
+
+def f(first,*args):
+    print(first)
+    print(args)
+f(1,4, 54, 45)
+
+**kwargs - keyword arguments
+
+tricks we reallt need to care about and incorporate into usage
+
+sets 
+comprehensions
+conditional statements
+lambda(in sort)
+zip
